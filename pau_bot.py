@@ -80,19 +80,28 @@ option = input("""Seleccione una opcion:
 2. Exit
 """)
 
-if option == "1":
-    while True:
-        input_ = input("Ingrese su matricula: ")
-        if login(input_)==True: break
-        else: print("Matricula incorrecta, inserte un ID válido.\n")
+while True:
+    if option == "1":
+        while True:
+            input_ = input("Ingrese su matricula: ")
+            if login(input_) == True:
+                break
+            else:
+                print("Matricula incorrecta, inserte un ID válido.\n")
 
-    while True:
-        option_2 = input("""
+        while True:
+            option_2 = input("""
 Seleccione una funcion
 1. Codewars
 2. Summary
-        """)
-        if option_2 == "1":
-            print(files_manager(input_))
+3. Back
+            """)
+            if option_2 == "1":
+                print(files_manager(input_))
 
-        if option_2 == "2": summary(input_)
+            if option_2 == "2": summary(input_)
+
+            if option_2 == "3": break
+
+
+    if option == "2": break
