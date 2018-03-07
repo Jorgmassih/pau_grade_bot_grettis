@@ -58,7 +58,7 @@ def summary(id):
         channel = csvfile.readlines()
         for line in channel:
             list.append(line.split(","))
-        print(list)
+        #print(list)
 
     count = 0
     elements = 0
