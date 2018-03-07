@@ -1,5 +1,5 @@
 import datetime
-import os.path
+#import os.path #Pass
 
 def login(id):
     if id.isdigit() and int(id[0:4]) >= 1962 and len(id)==8 and datetime.datetime.now().year >= int(id[0:4]):
@@ -47,10 +47,11 @@ def print_in_csv(id, text):
     with open('processed.csv', "a+") as generatedcsv:
         return generatedcsv.write(text + "\n")
 
-def found_file_test(id_test):
-  file = id_test + '.csv'
-  if os.path.exists(file): return True
-  else: return False
+####### Pass ################
+# def found_file_test(id_test):
+#   file = id_test + '.csv'
+#   if os.path.exists(file): return True
+#   else: return False
 
 def summary(id):
     with open('processed.csv') as csvfile:
